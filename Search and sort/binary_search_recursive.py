@@ -6,12 +6,13 @@ def binary_search_recursive(arr,target):
     #print(arr)
     if target == arr[half]:
         return "Found {}".format(target)
+    elif len(arr) == 1:
+        return "Not found"
     elif target< arr[half]:
         return binary_search_recursive(arr[:half],target)
     elif target>arr[half]:
         return binary_search_recursive(arr[half:],target)
-    elif len(arr) == 1:
-        return "Not found"
+
 
 arr = create_list_sorted(1000)
 print(binary_search_recursive(arr,241))
