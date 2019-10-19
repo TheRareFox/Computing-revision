@@ -16,6 +16,12 @@ def quick_sort(arr):
             else:
                 equal.append(i)
         return quick_sort(less) + equal + quick_sort(more)
+    
+def quicksortb(elements):
+    if len(elements) == 0:
+        return []
+    else:
+        return quicksortb([i for i in elements[1:] if i < elements[0]]) + [elements[0]] + quicksortb([i for i in elements[1:] if i >= elements[0]])
 
 #arr = create_list_random(100)
 #print(quick_sort(arr))
