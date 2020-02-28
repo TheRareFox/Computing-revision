@@ -1,5 +1,7 @@
 from create_list import create_list_random
 
+#time notation O(n^2)
+
 def bubble_sort(arr):
     sorted = True
     while sorted:
