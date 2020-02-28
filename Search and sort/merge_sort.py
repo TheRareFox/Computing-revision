@@ -1,5 +1,7 @@
 from create_list import create_list_random
 
+#time notation O(nlog(n))
+
 def merge_sort(arr):
     if len(arr) > 1:
         half = len(arr)//2
