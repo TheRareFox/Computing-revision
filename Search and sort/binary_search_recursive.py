@@ -1,6 +1,6 @@
 from create_list import create_list_sorted
 
-#time notation O(n^2)
+#time notation O(log(n))
 
 
 def binary_search_recursive(arr,target):
