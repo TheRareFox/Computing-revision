@@ -1,5 +1,7 @@
 from create_list import create_list_random
 
+#time notation O(nlog(n)) worse case O(n^2)
+
 def quick_sort(arr):
     less = []
     more = []
