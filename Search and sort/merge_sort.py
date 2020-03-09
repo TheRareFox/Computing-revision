@@ -9,6 +9,9 @@ def merge_sort(arr):
         right = arr[half:]
         merge_sort(left)
         merge_sort(right)
+
+        # -- sorting occurs here --
+        
         i = j = k = 0
         while i<len(left) and j<len(right):
             if left[i] <right[j]:
@@ -18,6 +21,9 @@ def merge_sort(arr):
                 arr[k] = right[j]
                 j += 1
             k+=1
+
+        # -- only one of this will execute --
+            
         while i<len(left):
             arr[k] = left[i]
             i += 1
@@ -27,7 +33,6 @@ def merge_sort(arr):
             arr[k] = right[j]
             j += 1
             k += 1
-        return arr
     return arr
 #arr = create_list_random(100)
 #print(merge_sort(arr))
