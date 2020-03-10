@@ -52,3 +52,16 @@ post = {"author": "Mike",
 collection.insert_one(post)
 print("After insertion")
 print("In db 'test_database':", db.list_collection_names())
+
+# --- find a post ---
+
+query = {"author": "Mike"}
+# query returns all authors with the name mike
+results = collection.find(query)
+for result in results:
+    print(result)
+    #prints out all values where author's name is mike
+    
+# --- drop a collection ---
+# collection disappears
+collection.drop()
