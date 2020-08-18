@@ -57,11 +57,31 @@ print("In db 'test_database':", db.list_collection_names())
 
 query = {"author": "Mike"}
 # query returns all authors with the name mike
-results = collection.find(query)
+results = collection.find(query).sort('name',-1)#sorts the name in desc order
 for result in results:
     print(result)
     #prints out all values where author's name is mike
-    
+
+#.find({'$and/$or':[{'fieldname':{$gt:'value'}},{'field_2:{'$lt':'value'}} ]})
+
+#$and/$or/$not
+++++++++++++++++++++++
+#$lte -> less than equals
+#$gt -> greater than
+#ne -> not equals
+#in -> in
+#exists -> exists
+#type -> type
+
+
+# --- update a post ---
+query = {'page_count':{'$exists':False}}
+collection.update_many(query,{'$set':{'page_count':'Over 9000'}}
+results = collection.find()
+for result in results:
+     print(result)
+
+                       
 # --- drop a collection ---
 # collection disappears
 collection.drop()
