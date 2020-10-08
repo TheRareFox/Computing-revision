@@ -1,5 +1,7 @@
 from create_list import create_list_random
 
+#time notation O(n^2)
+
 def bubble_sort(arr):
     sorted = True
     while sorted:
@@ -10,5 +12,6 @@ def bubble_sort(arr):
                 arr[i],arr[i+1] = arr[i+1],arr[i]
     return arr
 
-#arr = create_list_random(1000)
-#print(bubble_sort(arr))
+if __name__=="__main__":
+    arr = create_list_random(10)
+    print(bubble_sort(arr))

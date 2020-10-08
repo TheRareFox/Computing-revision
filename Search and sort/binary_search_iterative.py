@@ -1,5 +1,8 @@
 from create_list import create_list_sorted
 
+#time notation O(log(n))
+
+
 def binary_search_iterative(arr,target):
     half = len(arr)//2
     while target is not arr[half]:
